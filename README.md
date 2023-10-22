@@ -1,22 +1,15 @@
 # Germinal center (GC) Analysis
 We use Fiji to identify distinct regions within the  Germinal center (GC) using follicular dendritic cell (FDC) markers: CD23 and CD35.
 ## Overview
-Given an image with four channels, CD23, CD35, Dapi and T cells staining, and an ROI file marking the borders of the entire GC within the image, the macro does the followin:
-1. identifies distinct regions within the GC  
-//CGRegions
-//Input: a file with 4 channels:
-//Ch. 1: Dapi
-//Ch. 2: CD23 staining
-//Ch. 3: T cell staining
-//CH. 4: CD35 staining
-// 0. DETECT T-CELLS: SEGMENT NUCLEI, MEASURE MEAN T-CELLS INTENSITY (CD4), DISCARD NUC WITH LOW INTENSITY (PARAMETER) 
-// 1. Get The ROI of the GC (Input for now)
-// 2. Generate a fitting ellipse for that ROI
-// 3. Generate an ROI for CD35 staining within the ellipse
-// 4. Generate an ROI for CD23 staining within the ellipse
-// 6. Find the hemisphere where CD35 ROI is mainly located
-// 7. Draw a line of iWidthPercentage (of vertical diagonal) along the dagonal of the elipse starting from that hemisphere
-//    that starts iLineMargin (of horizontal diagonal) before the ellipse and ends iLineMargin after it
-// 8. Generate a histogram of the line on top of CD35 and CD23 channels and save it to file
-// 10. Calculate the number of T cells and their density in CD35 and CD23 ROIs
-// 11. generate an image with GC,CD23,CD35 on top of CD23 and CD35 channels
+Given an image with four channels, CD23, CD35, Dapi and T cells staining, and an ROI file marking the borders of the entire GC within the image, the macro does the following:
+1. Generates a fitting ellipse for the GC's ROI
+2. Generates an ROI for CD35 and CD23 staining within the ellipse
+3. Draws a line along the main diagonal of the elipse
+4. Generate a histogram of the line on top of CD35 and CD23 channels
+5. DETECT T-CELLS and provide a histogram to their count along the GC diagonal
+6. Calculate the number of T cells and their density in CD35 and CD23 ROIs
+## Generate a fitting elipse
+
+## User Input
+The user can 
+![Sharon input](https://github.com/WIS-MICC-CellObservatory/GC-Analysis-/assets/64706090/cab4211d-5ff3-4c58-b9b4-bf331e3da73e)
