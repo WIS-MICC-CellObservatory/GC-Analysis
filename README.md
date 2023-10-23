@@ -1,5 +1,5 @@
 # Germinal center (GC) Analysis
-We use Fiji to identify distinct regions within the  Germinal center (GC) using follicular dendritic cell (FDC) markers: CD23 and CD35. We use Stardist to identify T cells there, and then analyze their distribution along the main diagonal of the GC.
+We use Fiji to identify distinct regions within the  Germinal center (GC) using follicular dendritic cell (FDC) markers: CD23 and CD35. We use Stardist to identify T cells there.
 ## Overview
 Given an image with four channels, CD23, CD35, Dapi and T cells staining, and an ROI file marking the borders of the entire GC within the image, the macro does the following:
 1. Generates an ROI for CD35 and CD23 staining within the fitting ellipse of the GC's ROI
