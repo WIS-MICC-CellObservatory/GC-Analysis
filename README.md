@@ -14,7 +14,6 @@ Left: CD35 channel. Right: The identified CD35 region within the GC that is cont
 To detect T cells we first run out-of-the-box Stardist on the T-cells Dapi's channel with the following parameters:
 args=['input':'Dapi', 'modelChoice':'Versatile (fluorescent nuclei)', 'normalizeInput':'true', 'percentileBottom':'1.0', 'percentileTop':'99.8', 'probThresh':'0.5', 'nmsThresh':'0.4', 'outputType':'Both', 'nTiles':'1', 'excludeBoundary':'2', 'roiPosition':'Automatic', 'verbose':'false', 'showCsbdeepProgress':'false', 'showProbAndDist':'false'], process=[false]").
 ![Stardist](https://github.com/WIS-MICC-CellObservatory/GC-Analysis-/assets/64706090/becd2d3c-5dee-4bd7-b5be-6635a7431c43)
-
 We then filter out identified nuclei with low mean intensity (lower than 3000), or non-regular size (smaller than 10 m^2 or bigger than 100 m^2)
 ## Generate histograms
 To generate the histograms, we define a rectangle along the main diagonal of the GC's Fitting ellipse. The rectangular captures also regions before and after the GC as to capture the CD35/CD23 intensity there too.
