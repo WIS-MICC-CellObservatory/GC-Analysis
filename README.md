@@ -18,4 +18,5 @@ We then filter out identified nuclei with low mean intensity (lower than 3000), 
 ## Generate histograms
 To generate the histograms, we define a rectangle along the main diagonal of the GC's Fitting ellipse. The rectangular captures also regions before and after the GC as to capture the CD35/CD23 intensity there too.
 ![CD35 histogram](https://github.com/WIS-MICC-CellObservatory/GC-Analysis/assets/64706090/ea568070-a44f-4c3f-8b28-638da047b2f5)
+
 The width of the rectangle is set to 20% of the GC fitting ellipse’s minor diagonal. The Length of the rectangular is set to include extra 20% of the GC fitting ellipse’s major diagonal residing before and after the GC region.
